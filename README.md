@@ -1,4 +1,4 @@
-# SSA Gourmet — Intelligent Battery Optimization
+# SSA Gourmet - Intelligent Battery Optimization
 
 ### AED × UPC Sostenible Datathon 2026
 
