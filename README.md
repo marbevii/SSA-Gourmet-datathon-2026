@@ -1,4 +1,4 @@
-# ⚡ SSA Gourmet — Intelligent Battery Optimization
+# SSA Gourmet — Intelligent Battery Optimization
 
 ### AED × UPC Sostenible Datathon 2026
 
@@ -10,7 +10,7 @@ Our solution combines **Model Predictive Control (MPC), mathematical optimizatio
 
 ---
 
-## 🌍 The Challenge
+## The Challenge
 
 How can we make a university campus more energy-efficient using artificial intelligence and optimization?
 
@@ -18,18 +18,18 @@ Electricity demand, photovoltaic production, electricity prices, and grid carbon
 
 The objective is to develop an autonomous controller that:
 
-- 🌱 Minimizes CO₂ emissions associated with electricity consumption.
-- 💰 Reduces electricity costs.
-- ☀️ Maximizes the use of locally generated solar energy.
-- 🔋 Optimizes battery charging and discharging decisions.
-- 🛡️ Respects battery capacity, power limits, and operational safety.
-- 🔮 Generalizes to unseen future data without accessing future observations.
+- Minimizes CO₂ emissions associated with electricity consumption.
+- Reduces electricity costs.
+- Maximizes the use of locally generated solar energy.
+- Optimizes battery charging and discharging decisions.
+- Respects battery capacity, power limits, and operational safety.
+- Generalizes to unseen future data without accessing future observations.
 
 The controller receives a new observation every hour and must return a single battery power setpoint.
 
 **Positive power = charging | Negative power = discharging**
 
-## 🔥 Two Optimization Modes
+## Two Optimization Modes
 
 The competition introduces two operational environments.
 
@@ -53,7 +53,7 @@ The challenge is no longer simply identifying cheap and expensive hours. It is a
 
 ---
 
-## 🧠 Our Solution
+## Our Solution
 
 We developed a forecasting-driven, rolling-horizon battery controller built around five components.
 
@@ -129,7 +129,7 @@ A final safety clamp restricts the requested power to the physically feasible ra
 
 ---
 
-## ⚙️ Mathematical Formulation
+## Mathematical Formulation
 
 The competition evaluates performance using a weighted combination of relative carbon and cost savings:
 
@@ -175,7 +175,7 @@ The optimization is implemented using **SciPy's HiGHS linear programming solver*
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The final submission contains two files:
 
@@ -208,7 +208,7 @@ The submission is self-contained and does not require access to the training CSV
 
 ---
 
-## 🔄 Decision-Making Pipeline
+## Decision-Making Pipeline
 
 ```text
            NEW HOURLY OBSERVATION
@@ -252,7 +252,7 @@ The submission is self-contained and does not require access to the training CSV
 
 ---
 
-## 🧪 Evaluation and Generalization
+## Evaluation and Generalization
 
 The objective is not to maximize performance on historical data alone.
 
@@ -287,7 +287,7 @@ A recorded Hard Mode public evaluation achieved:
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 **Language:** Python
 
@@ -303,7 +303,7 @@ A recorded Hard Mode public evaluation achieved:
 
 ---
 
-## 🚀 Running the Agent
+## Running the Agent
 
 Install the required Python dependencies:
 
@@ -336,7 +336,7 @@ The official evaluation environment calls `BatteryAgent.act()` once per simulati
 
 ---
 
-## 🎯 Key Engineering Principles
+## Key Engineering Principles
 
 **Causal by design.** The controller uses available observations and learned parameters rather than future test information.
 
@@ -352,7 +352,7 @@ The official evaluation environment calls `BatteryAgent.act()` once per simulati
 
 ---
 
-## 👥 Team — SSA Gourmet
+## Team — SSA Gourmet
 
 Developed by:
 
@@ -367,7 +367,7 @@ AED × UPC Sostenible Datathon 2026
 
 ---
 
-## 💡 What We Learned
+## What We Learned
 
 This project demonstrates that energy optimization is not simply about charging a battery when electricity is cheap and discharging when it is expensive.
 
