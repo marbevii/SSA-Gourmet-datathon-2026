@@ -133,17 +133,17 @@ A final safety clamp restricts the requested power to the physically feasible ra
 
 The competition evaluates performance using a weighted combination of relative carbon and cost savings:
 
-\[
+$$
 \text{Score}=\max(0,\ 0.70\Delta CO_2 + 0.30\Delta Cost - 0.20N_{\text{violations}})
-\]
+$$
 
 where savings are expressed in percentage points.
 
 Our controller uses a surrogate objective that combines expected carbon intensity and electricity prices:
 
-\[
+$$
 w_t = c_t + \lambda_t p_t
-\]
+$$
 
 where:
 
@@ -153,23 +153,23 @@ where:
 
 The optimization minimizes expected weighted grid imports across demand scenarios:
 
-\[
+$$
 \min \sum_{s \in S} P_s \sum_{t=1}^{H} w_t g_{s,t}^{+}
-\]
+$$
 
 subject to battery energy and power constraints.
 
 The battery dynamics are modeled as:
 
-\[
+$$
 SOC_{t+1}=SOC_t+\eta P_t^{charge}-\frac{P_t^{discharge}}{\eta}
-\]
+$$
 
 with:
 
-\[
+$$
 \eta=\sqrt{0.90}
-\]
+$$
 
 The optimization is implemented using **SciPy's HiGHS linear programming solver**.
 
